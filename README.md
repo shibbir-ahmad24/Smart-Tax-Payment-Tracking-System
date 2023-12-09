@@ -10,4 +10,4 @@ Course: CSIT555 Database Systems
 
 Team: Rolex
 
-Members: Shibbir Ahmed Arif, Shivaprasad Dubyala, Udayteja Reddy Pingili and Achyuth Rapolu
+Team Members: Shibbir Ahmed Arif, Shivaprasad Dubyala, Udayteja Reddy Pingili and Achyuth Rapolu
