@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Tax Payment Tracking System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='layout-styles.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+    <h1>Smart Tax Payment Tracking System</h1>
+
+    <!-- New Record Entry Form -->
+    <form id="taxForm" action="/insert-record" method="post">
+        <h4>Enter A New Record</h4>
+        <label for="companyInput">Company</label>
+        <input type="text" id="companyInput" name="company" required>
+        <label for="amountInput">Amount</label>
+        <input type="number" id="amountInput" name="amount_no" required>
+        <label for="statusInput">Status</label>
+        <select id="statusInput" name="status" required>
+            <option value="paid">Paid</option>
+            <option value="unpaid">Unpaid</option>
+        </select>
+        <label for="paymentDateInput">Payment Date</label>
+        <input type="date" id="paymentDateInput" name="payment_date" placeholder="Payment Date">
+        <label for="due_date">Due Date</label>
+        <select id="dueDate" name="due_date" required>
+        </select>
+        <button type="submit">Save</button>
+    </form>
+
+    <!-- Records Display Table -->
+    <div id="recordsContainer">
+        <h4> Tax Summary</h4>
+        <label>Select Due Date</label>
+
+        <select class="form-control mb-2" id="selectDueDate" name="due_date" onchange="updateDataTable();">
+            <option value="all">All</option>
+        </select>
+
+        <table id="recordsTable">
+            <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Payment Date</th>
+                    <th>Due Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="recordsTableBody">
+                {% for record in records %}
+                <tr>
+                    <td>{{ record.company_name }}</td>
+                    <td name="record-amount">{{ record.amount_no }}</td>
+                    <td>{{ record.status }}</td>
+                    <td>{{ record.payment_date.strftime('%Y-%m-%d') if record.payment_date else 'NA' }}</td>
+                    <td>{{ record.due_date.strftime('%Y-%m-%d') }}</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" onclick="showUpdateModal('{{ record.t_id }}', '{{ record.company_name }}', '{{ record.amount_no }}','{{ record.status }}', '{% if record.payment_date %}{{ record.payment_date.strftime('%Y-%m-%d') }}{% endif %}', '{{ record.due_date.strftime('%Y-%m-%d') }}')">Update</button>
+                        <button type="button" class="btn btn-danger" onclick="confirmDelete('{{ record.t_id }}')">Delete</button>
+                    </td>
+
+                    <!-- Record Update -->
+                    <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="updateModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="updateModalLabel">Let's update the record</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                            <div class="modal-body">
+
+                                <!-- Form for update record -->
+                                <form id="updateForm" action="/update/{{ record.t_id }}" method="post">
+                                    <input type="hidden" id="updateIdInput" name="t_id">
+                                    <label for="updateCompanyInput">Company</label>
+                                    <input type="text" class="form-control mb-2" id="updateCompanyInput" name="company" required>
+                                    <label for="updateAmountInput">Amount</label>
+                                    <input type="number" class="form-control mb-2" id="updateAmountInput" name="amount_no" required>
+                                    <label for="updateStatusInput">Status</label>
+                                    <select class="form-control mb-2" id="updateStatusInput" name="status" required>
+                                        <option value="paid">Paid</option>
+                                        <option value="unpaid">Unpaid</option>
+                                    </select>
+                                    <label for="updatePaymentDateInput">Payment Date</label>
+                                    <input type="date" class="form-control mb-2" id="updatePaymentDateInput" name="payment_date">
+                                    <label for="updateDueDateSelect">Due Date</label>
+                                    <select class="form-control mb-2" id="updateDueDateSelect" name="due_date" required>
+                                    </select>
+                                </form>
+                            </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary" onclick="submitUpdate()">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div id="taxContainer">
+            <table id="taxTable">
+                <tr>
+                    <td width="80%">Total Amount</td>
+                    <td id="totalAmountSpan"></td>
+                </tr>
+                <tr>
+                    <td width="80%">Rate of Tax</td>
+                    <td><input type="number" class="form-control mb-2" id="taxRateInput" placeholder="0.03" oninput="calculateTaxDue()" required></td>
+                </tr>
+                <tr>
+                    <td width="80%">Tax Due</td>
+                    <td id="taxDueSpan"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+   
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='custom-scripts.js') }}"></script>
+    
+</body>
+</html>
