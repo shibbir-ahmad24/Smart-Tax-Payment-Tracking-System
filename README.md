@@ -4,7 +4,7 @@ Language: Python
 
 Web Development Tools: HTML, CSS, JavaScript, JQuery
 
-Database: Sqlite
+Database: SQLite
 
 Course: CSIT555 Database Systems
 
