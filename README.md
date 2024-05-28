@@ -5,6 +5,7 @@ Project Summary
 • Developed a dynamic web application using the Python Flask framework
 
 • Constructed a tax payment model with various features:
+
     ∗ Displaying the home page of the application
     ∗ Retrieving tax payment records based on all due dates
     ∗ Fetching tax payment records based on a specific due date
