@@ -20,7 +20,7 @@ Project Summary
 
 Language: Python
 
-Web Development Tools: HTML, CSS, JavaScript, JQuery
+Web Development Tools: Flask, HTML, CSS, JavaScript, JQuery
 
 Database: SQLite
 
