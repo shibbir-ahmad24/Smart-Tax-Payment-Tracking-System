@@ -6,18 +6,17 @@ Project Summary
 
 •	Built a tax payment model for different features:
 
-    	To show the home page of the app
-    
-    	To get the tax payment records based on all due date
-    
-    	To get the tax payment records based on a specific due date
-    
-    	To insert a new tax payment record, 
-    
-    	To update any existing tax payment record, 
-    
-    	To delete any existing tax payment record
-
+  1. To show the home page of the app
+  
+  2. To get the tax payment records based on all due date
+  
+  3. To get the tax payment records based on a specific due date
+  
+  4. To insert a new tax payment record, 
+  
+  5. To update any existing tax payment record, 
+  
+  6. To delete any existing tax payment record
 
 Language: Python
 
