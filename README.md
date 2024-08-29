@@ -7,7 +7,7 @@ Tax payment tracking is often cumbersome and prone to errors due to the manual h
 
 ### **Solution**
 
-To address these challenges, the Smart-Tax-Payment-Tracking-System was developed as a dynamic web application using the Python Flask framework. This system automates and streamlines the tax payment process by offering the following features:
+To address these challenges, the **Smart-Tax-Payment-Tracking-System** was developed as a dynamic web application using the Python Flask framework. This system automates and streamlines the tax payment process by offering the following features:
 -	**Home Page:** A user-friendly interface that serves as the entry point for all functionalities.
 -	**Retrieve All Tax Payment Records:** Users can view all tax payments along with their due dates, enabling easy tracking of all pending and completed payments.
 -	**Retrieve Records by Due Date:** The system allows users to fetch specific tax payment records based on a selected due date.
