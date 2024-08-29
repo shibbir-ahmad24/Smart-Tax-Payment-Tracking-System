@@ -1,4 +1,4 @@
-# Smart-Tax-Payment-Tracking-System
+# Smart Tax Payment Tracking System
 
 ### **Problem**
 
