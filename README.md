@@ -34,7 +34,11 @@ The Smart-Tax-Payment-Tracking-System significantly improves the efficiency of m
 
 ### **Visuals**
 
-(Since I can't include visuals directly here, you can create or include screenshots of the home page, tax records retrieval interface, and any other relevant UI elements in the final documentation.)
+![image1](https://github.com/shibbir282/Smart-Tax-Payment-Tracking-System/blob/main/images/image1.PNG)
+
+![image2](https://github.com/shibbir282/Smart-Tax-Payment-Tracking-System/blob/main/images/image2.PNG)
+
+![image3](https://github.com/shibbir282/Smart-Tax-Payment-Tracking-System/blob/main/images/image3.PNG)
 
 ### **Course**
 
