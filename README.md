@@ -1,11 +1,11 @@
 # Smart-Tax-Payment-Tracking-System
 
-Problem
+### **Problem**
 
 Tax payment tracking is often cumbersome and prone to errors due to the manual handling of records. Organizations and individuals struggle to keep up with multiple due dates, making it difficult to manage payments efficiently. This leads to missed deadlines, penalties, and an overall lack of transparency in tax-related transactions.
 
 
-Solution
+### **Solution**
 
 To address these challenges, the Smart-Tax-Payment-Tracking-System was developed as a dynamic web application using the Python Flask framework. This system automates and streamlines the tax payment process by offering the following features:
 -	Home Page: A user-friendly interface that serves as the entry point for all functionalities.
@@ -16,13 +16,14 @@ To address these challenges, the Smart-Tax-Payment-Tracking-System was developed
 -	Delete Records: Unnecessary or incorrect records can be deleted from the database, keeping the system clean and up-to-date.
 
 
-Technologies Used:
+### **Technologies Used:**
+
 -	Language: Python
 -	Web Development Tools: Flask, HTML, CSS, JavaScript, JQuery
 -	Database: SQLite
 
 
-Impact
+### **Impact**
 
 The Smart-Tax-Payment-Tracking-System significantly improves the efficiency of managing tax payments by:
 -	Reducing Manual Errors: Automated record handling reduces the risk of human errors in tax payment tracking.
@@ -31,15 +32,15 @@ The Smart-Tax-Payment-Tracking-System significantly improves the efficiency of m
 -	Ensuring Compliance: With easy access to all due dates, the system helps users stay compliant with tax regulations, avoiding penalties.
 
 
-Visuals
+### **Visuals**
 
 (Since I can't include visuals directly here, you can create or include screenshots of the home page, tax records retrieval interface, and any other relevant UI elements in the final documentation.)
 
-Course
+### **Course**
 
 -	Course: CSIT555 Database Systems
   
-Team Information
+### **Team Information**
 
 -	Team Name: Rolex
 -	Team Members:
