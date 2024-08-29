@@ -16,13 +16,6 @@ To address these challenges, the Smart-Tax-Payment-Tracking-System was developed
 -	Delete Records: Unnecessary or incorrect records can be deleted from the database, keeping the system clean and up-to-date.
 
 
-### **Technologies Used:**
-
--	Language: Python
--	Web Development Tools: Flask, HTML, CSS, JavaScript, JQuery
--	Database: SQLite
-
-
 ### **Impact**
 
 The Smart-Tax-Payment-Tracking-System significantly improves the efficiency of managing tax payments by:
@@ -30,6 +23,13 @@ The Smart-Tax-Payment-Tracking-System significantly improves the efficiency of m
 -	Enhancing Accessibility: The web application is accessible from any device with an internet connection, making tax management more convenient.
 -	Improving Organization: By allowing users to update, delete, and retrieve records efficiently, the system ensures that all tax-related data is organized and up-to-date.
 -	Ensuring Compliance: With easy access to all due dates, the system helps users stay compliant with tax regulations, avoiding penalties.
+
+
+### **Technologies Used:**
+
+-	Language: Python
+-	Web Development Tools: Flask, HTML, CSS, JavaScript, JQuery
+-	Database: SQLite
 
 
 ### **Visuals**
